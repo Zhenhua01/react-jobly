@@ -3,7 +3,7 @@ import { useContext } from "react";
 import userContext from '../context/userContext';
 
 /**Presentational Component:
- * HomePage for JoblyApp
+ * HomePage for Jobly App
  *
  * Context: user
  *  {username, firstName, lastName, email, isAdmin, applications:[]}

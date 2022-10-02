@@ -1,7 +1,6 @@
-// import { render } from "@testing-library/react";
-// import App from "./App";
-// import { MemoryRouter } from "react-router";
+import { render } from "@testing-library/react";
+import App from "./App";
 
-// it("renders without crashing", function() {
-//   render(<MemoryRouter><App /></MemoryRouter>);
-// });
+it("renders without crashing", function() {
+  render(<App />);
+});

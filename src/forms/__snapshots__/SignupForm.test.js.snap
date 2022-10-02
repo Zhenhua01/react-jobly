@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="SignupForm"
+  >
+    <div
+      class="mb-3"
+    >
+      <label
+        for="username"
+      >
+        Username
+      </label>
+      <input
+        aria-label="username"
+        class="form-control"
+        id="username"
+        name="username"
+        required=""
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        for="password"
+      >
+        Password
+      </label>
+      <input
+        aria-label="password"
+        class="form-control"
+        id="password"
+        name="password"
+        required=""
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        for="firstName"
+      >
+        First Name
+      </label>
+      <input
+        aria-label="firstName"
+        class="form-control"
+        id="firstName"
+        name="firstName"
+        required=""
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        for="lastName"
+      >
+        Last Name
+      </label>
+      <input
+        aria-label="lastName"
+        class="form-control"
+        id="lastName"
+        name="lastName"
+        required=""
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        for="email"
+      >
+        Email
+      </label>
+      <input
+        aria-label="email"
+        class="form-control"
+        id="email"
+        minlength="6"
+        name="email"
+        required=""
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <button
+        class="btn-primary btn SignupForm-addBtn"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 function ProfileForm({ update }) {
   const navigate = useNavigate();
-  const { user } = useContext(userContext);
+  const user = useContext(userContext);
   const [formError, setFormError] = useState([]);
 
   const [formData, setFormData] = useState({

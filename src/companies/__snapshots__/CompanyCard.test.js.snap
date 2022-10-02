@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot with logo 1`] = `
+<DocumentFragment>
+  <div
+    class="container m-2 companyCard shadow p-3 mb-3 bg-white rounded"
+  >
+    <a
+      href="/companies/rithm"
+    >
+      <div
+        class="CompanyCard"
+      >
+        <h6>
+          Rithm School
+        </h6>
+        <p>
+          Become an exceptional developer in 16 weeks.
+        </p>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot without logo 1`] = `
+<DocumentFragment>
+  <div
+    class="container m-2 companyCard shadow p-3 mb-3 bg-white rounded"
+  >
+    <a
+      href="/companies/algo"
+    >
+      <div
+        class="CompanyCard"
+      >
+        <h6>
+          Algo School
+        </h6>
+        <p>
+          Become a mediocre developer in 160 weeks.
+        </p>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;

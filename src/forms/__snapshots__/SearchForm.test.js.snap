@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="SearchForm"
+  >
+    <div
+      class="mb-3"
+    >
+      <input
+        aria-label="name"
+        class="form-control"
+        id="name"
+        name="name"
+        placeholder="Enter search term.."
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <button
+        class="btn-primary btn SearchForm-addBtn"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
