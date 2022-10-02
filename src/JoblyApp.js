@@ -1,11 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 import JoblyApi from './utils/api';
-import NavBar from './NavBar/NavBar';
-import RoutesList from './RoutesList';
-import userContext from './Context/userContext';
+import NavBar from './navbar-routes/NavBar';
+import RoutesList from './navbar-routes/RoutesList';
+import userContext from './context/userContext';
 import jwt from 'jwt-decode';
-import Loading from './Loading';
+import Loading from './utils/Loading';
 
 const initialLoad = {
   isLoading: true,

@@ -1,6 +1,6 @@
 import './JobCard.css';
 import { useContext } from "react";
-import userContext from '../Context/userContext';
+import userContext from '../context/userContext';
 /**
  * Presentational Component for Job
  *

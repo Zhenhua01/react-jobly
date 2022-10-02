@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import { useContext } from "react";
-import userContext from '../Context/userContext';
+import userContext from '../context/userContext';
 
 /** NavBar for Jobly */
 function NavBar({ logout }) {

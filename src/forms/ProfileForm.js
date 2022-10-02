@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import userContext from '../Context/userContext';
+import userContext from '../context/userContext';
 import { useNavigate } from "react-router-dom";
 
 /** Form for displaying user profile.

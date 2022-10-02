@@ -1,13 +1,13 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import HomePage from './Home/HomePage';
-import CompanyList from './Company/CompanyList';
-import JobList from './Job/JobList';
-import CompanyDetail from './Company/CompanyDetail';
-import SignupForm from './Form/SignupForm';
-import LoginForm from './Form/LoginForm';
-import ProfileForm from './Form/ProfileForm';
+import HomePage from '../homepage/HomePage';
+import CompanyList from '../companies/CompanyList';
+import JobList from '../jobs/JobList';
+import CompanyDetail from '../companies/CompanyDetail';
+import SignupForm from '../forms/SignupForm';
+import LoginForm from '../forms/LoginForm';
+import ProfileForm from '../forms/ProfileForm';
 import { useContext } from "react";
-import userContext from './Context/userContext';
+import userContext from '../context/userContext';
 
 /** Routes for Jobly
  *

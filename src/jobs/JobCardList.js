@@ -1,6 +1,4 @@
 import JobCard from './JobCard';
-import { useContext } from "react";
-import userContext from '../Context/userContext';
 
 /** Creates JobCards with list of jobs
  *
@@ -10,7 +8,7 @@ import userContext from '../Context/userContext';
  */
 
 function JobCardList({ jobs }) {
-  const { user } = useContext(userContext);
+
   return (
     <ul>
       {jobs.map(job => {

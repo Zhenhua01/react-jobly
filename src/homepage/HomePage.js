@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import userContext from '../Context/userContext';
+import userContext from '../context/userContext';
 
 /**Presentational Component:
  * HomePage for JoblyApp
- * 
- * Context: user 
+ *
+ * Context: user
  *  {username, firstName, lastName, email, isAdmin, applications:[]}
  *
  * RoutesList -> HomePage

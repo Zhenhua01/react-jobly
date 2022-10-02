@@ -1,10 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
 import JoblyApi from '../utils/api';
-import Loading from '../Loading';
-import JobCardList from '../Job/JobCardList';
-import userContext from '../Context/userContext';
-import { Navigate } from 'react-router-dom';
+import Loading from '../utils/Loading';
+import JobCardList from '../jobs/JobCardList';
+import userContext from '../context/userContext';
 
 
 /**
@@ -12,8 +11,8 @@ import { Navigate } from 'react-router-dom';
  *
  * Props: none
  * State: company { handle, name, description, jobs: [{job}, ...] }
- * 
- * Context: user 
+ *
+ * Context: user
  *  {username, firstName, lastName, email, isAdmin, applications:[]}
  *
  * RoutesList -> CompanyDetails -> JobCardList -> JobCard
@@ -24,8 +23,6 @@ function CompanyDetail() {
 
   const params = useParams();
   const companyHandle = params.handle;
-
-
 
   const [company, setCompany] = useState({
     company: [],
@@ -46,7 +43,6 @@ function CompanyDetail() {
     getCompany()
 
   }, [user, companyHandle]);
-
 
   if (company.isLoading) return <Loading />;
 

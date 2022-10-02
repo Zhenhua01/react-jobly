@@ -7,17 +7,9 @@ const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
  * Static class tying together methods used to get/send to to the API.
  * There shouldn't be any frontend-specific stuff here, and there shouldn't
  * be any API-aware stuff elsewhere in the frontend.
- *
  */
 
-class JoblyApi {
-  // Remember, the backend needs to be authorized with a token
-  // We're providing a token you can use to interact with the backend API
-  // DON'T MODIFY THIS TOKEN
-  // static token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZ" +
-  //   "SI6InRlc3R1c2VyIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTU5ODE1OTI1OX0." +
-  //   "FtrMwBQwe6Ue-glIFgz_Nf8XxRT2YecFCiSpYL0fCXc";
-
+ class JoblyApi {
 
   static token = "";
 
@@ -27,8 +19,8 @@ class JoblyApi {
     const url = `${BASE_URL}/${endpoint}`;
     const headers = { Authorization: `Bearer ${JoblyApi.token}` };
     const params = (method === "get")
-      ? data
-      : {};
+        ? data
+        : {};
 
     try {
       return (await axios({ url, method, data, params, headers })).data;
@@ -48,20 +40,21 @@ class JoblyApi {
     return res.company;
   }
 
-  /** Get all companies or companies matching search term */
+  /** Get all companies or companies matching search term. */
+
   static async getCompanies(data = {}) {
     let res = await this.request(`companies`, data);
     return res.companies;
   }
 
-  /** Get all jobs or jobs matching search term */
+  /** Get all jobs or jobs matching search term. */
 
   static async getJobs(data = {}) {
     let res = await this.request(`jobs`, data);
     return res.jobs;
   }
 
-  /** Registers new user. */
+  /** Registers a new user. */
 
   static async signup(data) {
     let res = await this.request(`auth/register`, data, "post");
@@ -82,23 +75,19 @@ class JoblyApi {
     return res.user;
   }
 
-  /**Get User Information */
+  /**Get user information. */
+
   static async getUserInfo(username) {
     let res = await this.request(`users/${username}`);
     return res.user;
   }
 
-  /**Add job to user applications */
+  /**Add job to user applications. */
+
   static async applyToJob(username, id) {
-    try {
-      await this.request(`users/${username}/jobs/${id}`, {}, "post");
-      let res = await this.request(`users/${username}`);
-      return res.user;
-
-    } catch (err) {
-      console.log(err);
-    }
-
+    await this.request(`users/${username}/jobs/${id}`, {}, "post");
+    let res = await this.request(`users/${username}`);
+    return res.user;
   }
 }
 
