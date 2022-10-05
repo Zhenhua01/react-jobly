@@ -26,12 +26,16 @@ exports[`matches snapshot when logged out 1`] = `
     <h1>
       Jobly
     </h1>
-    <p>
-      All the jobs in one, convenient place.
-    </p>
-    <p>
-      Welcome back !
-    </p>
+    <button
+      class="btn-primary btn Login-addBtn"
+    >
+      Login
+    </button>
+    <button
+      class="btn-primary btn Signup-addBtn"
+    >
+      Signup
+    </button>
   </div>
 </DocumentFragment>
 `;

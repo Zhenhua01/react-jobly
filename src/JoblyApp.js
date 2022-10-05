@@ -24,11 +24,10 @@ function JoblyApp() {
   const initialToken = localStorage.getItem('token');
   const [token, setToken] = useState(initialToken);
   const [user, setUser] = useState(initialLoad);
+  // console.log("inside JoblyApp");
 
-  console.log("inside JoblyApp");
   useEffect(function getUserInfoAndSetLocalStorage() {
-    console.log("inside JoblyApp useEffect");
-
+    // console.log("inside JoblyApp useEffect");
     function setLocalStorage() {
       localStorage.setItem('token', token);
     }

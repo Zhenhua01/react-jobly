@@ -12,7 +12,7 @@ import userContext from '../context/userContext';
 /** Routes list for Jobly App. */
 
 function RoutesList({ signup, login, update }) {
-  const user = useContext(userContext);
+  const { user } = useContext(userContext);
 
   return (
     <div className="RoutesList">

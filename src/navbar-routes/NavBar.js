@@ -6,7 +6,7 @@ import userContext from '../context/userContext';
 /** Navigation bar for Jobly App. */
 
 function NavBar({ logout }) {
-  const user = useContext(userContext);
+  const { user } = useContext(userContext);
 
   return (
     <nav className="NavBar navbar navbar-light bg-light">

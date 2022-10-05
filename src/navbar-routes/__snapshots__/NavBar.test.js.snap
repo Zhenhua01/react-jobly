@@ -35,7 +35,7 @@ exports[`matches snapshot 1`] = `
       class="navLink active"
       href="/"
     >
-      Logout 
+      Logout testuser
     </a>
   </nav>
 </DocumentFragment>
@@ -55,28 +55,15 @@ exports[`matches snapshot when logged out 1`] = `
     </a>
     <a
       class="navLink"
-      href="/companies"
+      href="/login"
     >
-      Companies
+      Login
     </a>
     <a
       class="navLink"
-      href="/jobs"
+      href="/signup"
     >
-      Jobs
-    </a>
-    <a
-      class="navLink"
-      href="/profile"
-    >
-      Profile
-    </a>
-    <a
-      aria-current="page"
-      class="navLink active"
-      href="/"
-    >
-      Logout 
+      Signup
     </a>
   </nav>
 </DocumentFragment>

@@ -20,7 +20,7 @@ exports[`matches snapshot 1`] = `
         id="username"
         name="username"
         required=""
-        value=""
+        value="testuser"
       />
     </div>
     <div
@@ -71,7 +71,7 @@ exports[`matches snapshot 1`] = `
         id="email"
         name="email"
         required=""
-        value=""
+        value="test@test.net"
       />
     </div>
     <div

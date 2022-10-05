@@ -11,7 +11,7 @@ import userContext from '../context/userContext';
  * RoutesList -> HomePage
  */
 function HomePage() {
-  const user = useContext(userContext);
+  const { user } = useContext(userContext);
   const navigate = useNavigate();
 
   function loginClick() {
