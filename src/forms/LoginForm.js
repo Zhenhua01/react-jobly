@@ -46,10 +46,13 @@ function LoginForm({ login }) {
   }
 
   return (
-    <form className="LoginForm" onSubmit={handleSubmit}>
+    <form className="LoginForm mt-4" onSubmit={handleSubmit}>
+      <div className="container-fluid col-6 offset-3 form-group">
 
-      <div className="mb-3">
-        <label htmlFor="username">Username</label>
+      <div className="mb-2">
+        <label className="form-label" htmlFor="username">
+          Username
+          </label>
         <input
           id="username"
           name="username"
@@ -61,8 +64,10 @@ function LoginForm({ login }) {
         />
       </div>
 
-      <div className="mb-3">
-        <label htmlFor="password">Password</label>
+      <div className="mb-2">
+        <label className="form-label" htmlFor="password">
+          Password
+          </label>
         <input
           id="password"
           name="password"
@@ -80,12 +85,12 @@ function LoginForm({ login }) {
           <p>{formError[0]}</p>
         </div>
       }
-      <div className="mb-3">
-        <button className="btn-primary btn LoginForm-addBtn">
-          Submit
+      <div className="mt-4">
+        <button type="submit" className="btn btn-lg btn-info fw-bold">
+          Login
         </button>
       </div>
-
+    </div>
     </form>
   );
 }

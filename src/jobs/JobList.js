@@ -50,16 +50,12 @@ function JobList() {
   if (jobs.isLoading) return <Loading />;
 
   return (
-    <div className="JobList container-fluid p-2">
+    <div className="JobList container-fluid mt-3 mb-3">
       <div className='row justify-content-center'>
-        <div className='col-8'>
-          <SearchForm search={search} />
-        </div>
+        <SearchForm search={search} />
       </div>
-      <div className='row justify-content-center'>
-        <div className='col'>
-          <JobCardList jobs={jobs.jobs} />
-        </div>
+      <div>
+        <JobCardList jobs={jobs.jobs} />
       </div>
     </div>
   );

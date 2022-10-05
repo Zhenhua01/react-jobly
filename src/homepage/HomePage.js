@@ -23,29 +23,32 @@ function HomePage() {
   }
 
   return (
-    <div className='HomePage'>
+    <div className="HomePage">
+      <div className="container-fluid text-center">
+        <h1 class="mt-3 mb-3">Jobly</h1>
 
-      <h1>Jobly</h1>
-      {user &&
-        <>
-          <p>All the jobs in one, convenient place.</p>
-          <p>Welcome back {user.firstName}!</p>
-        </>
-      }
-      {!user &&
-        <>
-          <button
-            onClick={loginClick}
-            className="btn-primary btn Login-addBtn">
-            Login
-          </button>
-          <button
-            onClick={signupClick}
-            className="btn-primary btn Signup-addBtn">
-            Signup
-          </button>
-        </>
-      }
+        {user &&
+          <>
+            <h4>Welcome back {user.firstName}</h4>
+          </>
+        }
+
+        {!user &&
+          <>
+            <h4 class="mb-4">All the jobs in one, convenient place.</h4>
+            <button type="button"
+              onClick={loginClick}
+              className="btn btn-lg btn-info fw-bold me-3">
+              Login
+            </button>
+            <button type="button"
+              onClick={signupClick}
+              className="btn btn-lg btn-info fw-bold">
+              Signup
+            </button>
+          </>
+        }
+      </div>
     </div>
   );
 }

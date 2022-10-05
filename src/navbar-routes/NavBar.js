@@ -9,21 +9,40 @@ function NavBar({ logout }) {
   const { user } = useContext(userContext);
 
   return (
-    <nav className="NavBar navbar navbar-light bg-light">
-      <NavLink className='navLink' to='/'>Jobly</NavLink>
-      {user && <>
-        <NavLink className='navLink' to='/companies'>Companies</NavLink>
-        <NavLink className='navLink' to='/jobs'>Jobs</NavLink>
-        <NavLink className='navLink' to='/profile'>Profile</NavLink>
-        <NavLink className='navLink' to='/' onClick={logout}>Logout {user.username}</NavLink>
-      </>
-      }
-      {!user &&
-        <>
-          <NavLink className='navLink' to='/login'>Login</NavLink>
-          <NavLink className='navLink' to='/signup'>Signup</NavLink>
-        </>
-      }
+    <nav class="NavBar navbar navbar-expand navbar-dark bg-primary">
+      <div class="container-fluid">
+        <NavLink className='navbar-brand ms-2' to='/'>Jobly</NavLink>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav ms-auto me-1">
+
+            {user && <>
+              <li class="nav-item">
+                <NavLink className='nav-link' to='/companies'>Companies</NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className='nav-link' to='/jobs'>Jobs</NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className='nav-link' to='/profile'>Profile</NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className='nav-link' to='/' onClick={logout}>Logout {user.username}</NavLink>
+              </li>
+            </>}
+
+            {!user && <>
+              <li class="nav-item">
+                <NavLink className='nav-link' to='/login'>Login</NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className='nav-link' to='/signup'>Signup</NavLink>
+              </li>
+            </>}
+
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 }

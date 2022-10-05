@@ -1,8 +1,19 @@
-.navLink {
-    color:black;
-    text-decoration: none;
+.navbar-brand {
+    font-size: xx-large;
 }
 
-.active {
-    color: red;
+.navbar-brand.active {
+    font-weight: bold
+}
+
+.NavBar {
+    font-size: x-large;
+}
+
+.nav-link {
+    margin-right: 5px;
+}
+
+.nav-link.active {
+    font-weight: bold;
 }

@@ -52,20 +52,16 @@ function CompanyList() {
   if (companies.isLoading) return <Loading />;
 
   return (
-    <div className="CompanyList container-fluid p-2">
+    <div className="CompanyList container-fluid mt-3 mb-3">
       <div className='row justify-content-center'>
-        <div className='col-8'>
-          <SearchForm search={search} />
-        </div>
+        <SearchForm search={search} />
       </div>
-      <div className='row justify-content-center'>
-        <div className='col'>
-          <ul>
-            {companies.companies.map(company => (
-              <li key={company.handle}><CompanyCard company={company} /></li>
-            ))}
-          </ul>
-        </div>
+      <div>
+        <ul>
+          {companies.companies.map(company => (
+            <li key={company.handle}><CompanyCard company={company} /></li>
+          ))}
+        </ul>
       </div>
     </div>
   );

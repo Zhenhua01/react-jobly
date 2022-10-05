@@ -49,9 +49,9 @@ function CompanyDetail() {
   const { name, description, jobs } = company.company;
 
   return (
-    <div className='container'>
-      <h1 className='m-2 p-2'>{name}</h1>
-      <p className='m-2 pl-2 pr-2'>{description}</p>
+    <div className="CompanyDetail container-fluid col-8 offset-2">
+      <h2 className='m-3'>{name}</h2>
+      <p className='m-3'>{description}</p>
       <JobCardList jobs={jobs} />
     </div>
   );

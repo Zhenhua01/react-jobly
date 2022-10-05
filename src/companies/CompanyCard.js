@@ -15,13 +15,14 @@ function CompanyCard({ company }) {
   const { handle, name, description, logoUrl } = company;
 
   return (
-    <div className='container m-2 companyCard shadow p-3 mb-3 bg-white rounded'>
-      <Link to={`/companies/${handle}`} key={handle}>
-        <div className='CompanyCard'>
-          <h6>{name}
+    <div className='container-fluid col-8 bg-white rounded'>
+      <Link className="link" to={`/companies/${handle}`} key={handle}>
+        <div className='CompanyCard mb-4'>
+
+          <h5><u>{ name }</u>
             {logoUrl &&
               <img className='logo float-end' src={logoUrl} alt={`${name}-logo`} />}
-          </h6>
+          </h5>
           <p>{description}</p>
 
         </div>

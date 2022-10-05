@@ -16,11 +16,15 @@ function JobCard({ job }) {
 
 
   return (
-    <div className="JobCard container shadow p-3 mb-3 bg-white rounded">
-      <h6>{title}</h6>
-      <p>{companyName}</p>
-      <p>Salary: {salary}</p>
-      <p>Equity: {equity}</p>
+    <div className="JobCard container-fluid col-8 mb-3 bg-white rounded">
+      <h5><u>{title}</u></h5>
+      <p>
+        {companyName}
+        <br></br>
+        Salary: {salary}
+        <br></br>
+        Equity: {equity}
+      </p>
 
       <button
         onClick={() => { apply(id); }}
