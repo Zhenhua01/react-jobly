@@ -3,85 +3,94 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <form
-    class="ProfileForm"
+    class="ProfileForm mt-4"
   >
     <div
-      class="mb-3"
+      class="container-fluid col-6 offset-3 form-group"
     >
-      <label
-        for="username"
+      <div
+        class="mb-2"
       >
-        Username
-      </label>
-      <input
-        aria-label="username"
-        class="form-control"
-        disabled=""
-        id="username"
-        name="username"
-        required=""
-        value="testuser"
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="firstName"
+        <label
+          class="form-label"
+          for="username"
+        >
+          Username
+        </label>
+        <input
+          aria-label="username"
+          class="form-control"
+          disabled=""
+          id="username"
+          name="username"
+          required=""
+          value="testuser"
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        First Name
-      </label>
-      <input
-        aria-label="firstName"
-        class="form-control"
-        id="firstName"
-        name="firstName"
-        required=""
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="lastName"
+        <label
+          class="form-label"
+          for="firstName"
+        >
+          First Name
+        </label>
+        <input
+          aria-label="firstName"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+          required=""
+          value=""
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        Last Name
-      </label>
-      <input
-        aria-label="lastName"
-        class="form-control"
-        id="lastName"
-        name="lastName"
-        required=""
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="email"
+        <label
+          class="form-label"
+          for="lastName"
+        >
+          Last Name
+        </label>
+        <input
+          aria-label="lastName"
+          class="form-control"
+          id="lastName"
+          name="lastName"
+          required=""
+          value=""
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        Email
-      </label>
-      <input
-        aria-label="email"
-        class="form-control"
-        id="email"
-        name="email"
-        required=""
-        value="test@test.net"
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <button
-        class="btn-primary btn ProfileForm-addBtn"
+        <label
+          class="form-label"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          aria-label="email"
+          class="form-control"
+          id="email"
+          name="email"
+          required=""
+          value="test@test.net"
+        />
+      </div>
+      <div
+        class="mt-4"
       >
-        Submit
-      </button>
+        <button
+          class="btn btn-lg btn-info fw-bold"
+          type="submit"
+        >
+          Update
+        </button>
+      </div>
     </div>
   </form>
 </DocumentFragment>

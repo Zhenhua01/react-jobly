@@ -1,10 +1,11 @@
 import JobCard from './JobCard';
 
-/** Creates JobCards with list of jobs
+
+/** Creates JobCards from list of jobs.
  *
  * Prop: jobs [{job}, ...]
  *
- * RoutesList -> JobList -> JobCardList -> JobCard
+ * JobList -> JobCardList -> JobCard
  */
 
 function JobCardList({ jobs }) {

@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
 import './CompanyCard.css';
 
-/**
- * Presentational Component for displaying each company
+
+/** CompanyCard component for displaying information of each company.
  *
- * Props: company: { handle, name, description }
+ * Props: company: { handle, name, description, logoUrl }
  *
  * Context: user
- *  {username, firstName, lastName, email, isAdmin, applications:[]}
+ *  { username, firstName, lastName, email, isAdmin, applications:[] }
  *
- * RoutesList -> CompanyList -> {SearchForm, CompanyCard}
+ * RoutesList -> CompanyList -> { CompanyCard, SearchForm }
  */
+
 function CompanyCard({ company }) {
   const { handle, name, description, logoUrl } = company;
 

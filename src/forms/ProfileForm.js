@@ -2,7 +2,8 @@ import { useState, useContext } from "react";
 import userContext from '../context/userContext';
 import { useNavigate } from "react-router-dom";
 
-/** Form for displaying user profile.
+
+/** ProfileForm for displaying and updating user profile.
  *
  * Props:
  * - update: function to call in parent.
@@ -11,9 +12,9 @@ import { useNavigate } from "react-router-dom";
  * - formData
  *
  * Context: user
- *  {username, firstName, lastName, email, isAdmin, applications:[]}
+ *  { username, firstName, lastName, email, isAdmin, applications:[] }
  *
- * RoutesList -> ProfileForm ->
+ * RoutesList -> ProfileForm
  */
 
 function ProfileForm({ update }) {

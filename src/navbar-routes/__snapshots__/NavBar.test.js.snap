@@ -3,40 +3,69 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <nav
-    class="NavBar navbar navbar-light bg-light"
+    class="NavBar navbar navbar-expand navbar-dark bg-primary"
   >
-    <a
-      aria-current="page"
-      class="navLink active"
-      href="/"
+    <div
+      class="container-fluid"
     >
-      Jobly
-    </a>
-    <a
-      class="navLink"
-      href="/companies"
-    >
-      Companies
-    </a>
-    <a
-      class="navLink"
-      href="/jobs"
-    >
-      Jobs
-    </a>
-    <a
-      class="navLink"
-      href="/profile"
-    >
-      Profile
-    </a>
-    <a
-      aria-current="page"
-      class="navLink active"
-      href="/"
-    >
-      Logout testuser
-    </a>
+      <a
+        aria-current="page"
+        class="navbar-brand ms-2 active"
+        href="/"
+      >
+        Jobly
+      </a>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarColor01"
+      >
+        <ul
+          class="navbar-nav ms-auto me-1"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/companies"
+            >
+              Companies
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/jobs"
+            >
+              Jobs
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/profile"
+            >
+              Profile
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/"
+            >
+              Logout testuser
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </DocumentFragment>
 `;
@@ -44,27 +73,48 @@ exports[`matches snapshot 1`] = `
 exports[`matches snapshot when logged out 1`] = `
 <DocumentFragment>
   <nav
-    class="NavBar navbar navbar-light bg-light"
+    class="NavBar navbar navbar-expand navbar-dark bg-primary"
   >
-    <a
-      aria-current="page"
-      class="navLink active"
-      href="/"
+    <div
+      class="container-fluid"
     >
-      Jobly
-    </a>
-    <a
-      class="navLink"
-      href="/login"
-    >
-      Login
-    </a>
-    <a
-      class="navLink"
-      href="/signup"
-    >
-      Signup
-    </a>
+      <a
+        aria-current="page"
+        class="navbar-brand ms-2 active"
+        href="/"
+      >
+        Jobly
+      </a>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarColor01"
+      >
+        <ul
+          class="navbar-nav ms-auto me-1"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/login"
+            >
+              Login
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/signup"
+            >
+              Signup
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </DocumentFragment>
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import userContext from "../context/userContext";
 
+
 const demoUser = {
   username: "testuser",
   first_name: "testfirst",

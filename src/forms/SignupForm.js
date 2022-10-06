@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const INITIAL_FORM_DATA = {
   username: '',
   password: '',
@@ -9,7 +10,7 @@ const INITIAL_FORM_DATA = {
   email: ''
 };
 
-/** Form for signing up new user.
+/** SignupForm for signing up new user.
  *
  * Props:
  * - signup: function to call in parent.
@@ -17,7 +18,7 @@ const INITIAL_FORM_DATA = {
  * State:
  * - formData
  *
- * RoutesList -> {LoginForm, SignupForm} ->
+ * RoutesList -> {LoginForm, SignupForm}
  */
 
 function SignupForm({ signup }) {

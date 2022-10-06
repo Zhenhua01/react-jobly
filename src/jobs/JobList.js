@@ -4,25 +4,23 @@ import SearchForm from '../forms/SearchForm';
 import JobCardList from './JobCardList';
 import Loading from '../utils/Loading';
 
-/**
- * List of Job
+
+/** JobList component for displaying list of jobs.
  *
  * Props: None
  * State: jobs [{job}, ...]
  *
- * RoutesList -> JobList -> {SearchForm, jobCard}
+ * RoutesList -> JobList -> { SearchForm, JobCardList }
  */
 
 function JobList() {
-  console.log("JobListing");
-
   const [jobs, setjobs] = useState({
     jobs: [],
     isLoading: true
   });
 
   useEffect(function getjobsOnLoad() {
-    console.log("inside JobListing useEffect");
+    // console.log("inside JobListing useEffect");
 
     async function getjobs() {
       const jobs = await JoblyApi.getJobs();
@@ -36,7 +34,7 @@ function JobList() {
     getjobs();
   }, []);
 
-  //Accepts formData { name: ... }
+  // Accepts formData { search: "term" }
   async function search(job) {
     const data = { title: job.name };
     const searchedjobs = await JoblyApi.getJobs(data);
@@ -61,4 +59,4 @@ function JobList() {
   );
 }
 
-export default JobList;;
+export default JobList;

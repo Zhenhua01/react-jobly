@@ -1,7 +1,8 @@
 import React from "react";
 import "./Loading.css";
 
-/** Loading message used by components that fetch API data. */
+
+/** Loading message to display when making API calls for data. */
 
 function Loading() {
   return (

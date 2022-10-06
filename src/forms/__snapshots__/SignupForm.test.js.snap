@@ -3,103 +3,113 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <form
-    class="SignupForm"
+    class="SignupForm mt-4"
   >
     <div
-      class="mb-3"
+      class="container-fluid col-6 offset-3 form-group"
     >
-      <label
-        for="username"
+      <div
+        class="mb-2"
       >
-        Username
-      </label>
-      <input
-        aria-label="username"
-        class="form-control"
-        id="username"
-        name="username"
-        required=""
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="password"
+        <label
+          class="form-label"
+          for="username"
+        >
+          Username
+        </label>
+        <input
+          aria-label="username"
+          class="form-control"
+          id="username"
+          name="username"
+          required=""
+          value=""
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        Password
-      </label>
-      <input
-        aria-label="password"
-        class="form-control"
-        id="password"
-        name="password"
-        required=""
-        type="password"
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="firstName"
+        <label
+          class="form-label"
+          for="password"
+        >
+          Password
+        </label>
+        <input
+          aria-label="password"
+          class="form-control"
+          id="password"
+          name="password"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        First Name
-      </label>
-      <input
-        aria-label="firstName"
-        class="form-control"
-        id="firstName"
-        name="firstName"
-        required=""
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="lastName"
+        <label
+          class="form-label"
+          for="firstName"
+        >
+          First Name
+        </label>
+        <input
+          aria-label="firstName"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+          required=""
+          value=""
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        Last Name
-      </label>
-      <input
-        aria-label="lastName"
-        class="form-control"
-        id="lastName"
-        name="lastName"
-        required=""
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="email"
+        <label
+          class="form-label"
+          for="lastName"
+        >
+          Last Name
+        </label>
+        <input
+          aria-label="lastName"
+          class="form-control"
+          id="lastName"
+          name="lastName"
+          required=""
+          value=""
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        Email
-      </label>
-      <input
-        aria-label="email"
-        class="form-control"
-        id="email"
-        minlength="6"
-        name="email"
-        required=""
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <button
-        class="btn-primary btn SignupForm-addBtn"
+        <label
+          class="form-label"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          aria-label="email"
+          class="form-control"
+          id="email"
+          minlength="6"
+          name="email"
+          required=""
+          value=""
+        />
+      </div>
+      <div
+        class="mt-4"
       >
-        Submit
-      </button>
+        <button
+          class="btn btn-lg btn-info fw-bold"
+          type="submit"
+        >
+          Signup
+        </button>
+      </div>
     </div>
   </form>
 </DocumentFragment>

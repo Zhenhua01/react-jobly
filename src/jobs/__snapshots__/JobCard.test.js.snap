@@ -3,16 +3,17 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="JobCard container shadow p-3 mb-3 bg-white rounded"
+    class="JobCard container-fluid col-8 mb-3 bg-white rounded"
   >
-    <h6>
-      CEO
-    </h6>
-    <p />
+    <h5>
+      <u>
+        CEO
+      </u>
+    </h5>
     <p>
+      <br />
       Salary: 1000000
-    </p>
-    <p>
+      <br />
       Equity: 10
     </p>
     <button

@@ -3,17 +3,20 @@
 exports[`matches snapshot with logo 1`] = `
 <DocumentFragment>
   <div
-    class="container m-2 companyCard shadow p-3 mb-3 bg-white rounded"
+    class="container-fluid col-8 bg-white rounded"
   >
     <a
+      class="link"
       href="/companies/rithm"
     >
       <div
-        class="CompanyCard"
+        class="CompanyCard mb-4"
       >
-        <h6>
-          Rithm School
-        </h6>
+        <h5>
+          <u>
+            Rithm School
+          </u>
+        </h5>
         <p>
           Become an exceptional developer in 16 weeks.
         </p>
@@ -26,17 +29,20 @@ exports[`matches snapshot with logo 1`] = `
 exports[`matches snapshot without logo 1`] = `
 <DocumentFragment>
   <div
-    class="container m-2 companyCard shadow p-3 mb-3 bg-white rounded"
+    class="container-fluid col-8 bg-white rounded"
   >
     <a
+      class="link"
       href="/companies/algo"
     >
       <div
-        class="CompanyCard"
+        class="CompanyCard mb-4"
       >
-        <h6>
-          Algo School
-        </h6>
+        <h5>
+          <u>
+            Algo School
+          </u>
+        </h5>
         <p>
           Become a mediocre developer in 160 weeks.
         </p>

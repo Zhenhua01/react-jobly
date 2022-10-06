@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-/** Form for searching companies.
+
+/** SearchForm for searching companies or jobs.
  *
  * Props:
  * - search: function to call in parent.
@@ -8,7 +9,7 @@ import { useState } from "react";
  * State:
  * - formData
  *
- * RoutesList -> {CompanyList, JobList} -> {SearchForm}
+ * RoutesList -> { CompanyList, JobList } -> { SearchForm }
  */
 
 function SearchForm({ search }) {

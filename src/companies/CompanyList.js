@@ -4,28 +4,26 @@ import SearchForm from '../forms/SearchForm';
 import CompanyCard from './CompanyCard';
 import Loading from '../utils/Loading';
 
-/**
- * List of Companies
+
+/** CompanyList component for displaying list of companies.
  *
  * Props: None
  * State: companies [{company}, ...]
  *
  * Context: user
- *  {username, firstName, lastName, email, isAdmin, applications:[]}
+ *  { username, firstName, lastName, email, isAdmin, applications:[] }
  *
- * RoutesList -> CompanyList -> {SearchForm, CompanyCard}
+ * RoutesList -> CompanyList -> { CompanyCard, SearchForm }
  */
 
 function CompanyList() {
-  console.log("CompanyListing");
-
   const [companies, setCompanies] = useState({
     companies: [],
     isLoading: true
   });
 
   useEffect(function getCompaniesOnLoad() {
-    console.log("inside CompanyList useEffect");
+    // console.log("inside CompanyList useEffect");
 
     async function getCompanies() {
       const companies = await JoblyApi.getCompanies();
@@ -39,7 +37,7 @@ function CompanyList() {
     getCompanies();
   }, []);
 
-  //Accepts formData { name: ... }
+  // Accepts formData { search: "term" }
   async function search(company) {
     const searchedCompanies = await JoblyApi.getCompanies(company);
 

@@ -6,16 +6,15 @@ import JobCardList from '../jobs/JobCardList';
 import userContext from '../context/userContext';
 
 
-/**
- * Company details with list of jobs
+/** CompanyDetail for displaying single company detail and list of company jobs.
  *
- * Props: none
+ * Props: None
  * State: company { handle, name, description, jobs: [{job}, ...] }
  *
  * Context: user
- *  {username, firstName, lastName, email, isAdmin, applications:[]}
+ *  { username, firstName, lastName, email, isAdmin, applications:[] }
  *
- * RoutesList -> CompanyDetails -> JobCardList -> JobCard
+ * RoutesList -> CompanyDetail -> JobCardList -> JobCard
  */
 
 function CompanyDetail() {
@@ -31,7 +30,6 @@ function CompanyDetail() {
 
   useEffect(function getCompanyOnLoad() {
     async function getCompany() {
-
       const company = await JoblyApi.getCompany(companyHandle);
 
       setCompany({
@@ -39,8 +37,7 @@ function CompanyDetail() {
         isLoading: false
       });
     }
-
-    getCompany()
+    getCompany();
 
   }, [user, companyHandle]);
 

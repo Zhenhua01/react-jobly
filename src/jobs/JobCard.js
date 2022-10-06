@@ -1,19 +1,20 @@
 import './JobCard.css';
 import { useContext } from "react";
 import userContext from '../context/userContext';
-/**
- * Presentational Component for Job
+
+
+/** JobCard component for displaying information for each job.
  *
- * Prop: job {id, ...}
+ * Prop: job {id, title, salary, equity, companyName }
  *
- * JobCardList -> Job Card
+ * RoutesList -> JobList -> JobCardList -> Job Card
  */
+
 function JobCard({ job }) {
   const { user, apply } = useContext(userContext);
   const { id, title, salary, equity, companyName } = job;
 
   const hasApplied = user.applications.includes(id);
-
 
   return (
     <div className="JobCard container-fluid col-8 mb-3 bg-white rounded">
@@ -27,7 +28,7 @@ function JobCard({ job }) {
       </p>
 
       <button
-        onClick={() => { apply(id); }}
+        onClick={() => { apply(id) }}
         disabled={hasApplied}
         className='btn btn-primary'>{hasApplied ? "Applied" : "Apply"}
       </button>
@@ -35,4 +36,5 @@ function JobCard({ job }) {
     </div>
   );
 }
+
 export default JobCard;

@@ -2,22 +2,25 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import userContext from '../context/userContext';
 
-/**Presentational Component:
- * HomePage for Jobly App
+
+/** HomePage for Jobly App
  *
  * Context: user
- *  {username, firstName, lastName, email, isAdmin, applications:[]}
+ *  { username, firstName, lastName, email, isAdmin, applications:[] }
  *
- * RoutesList -> HomePage
+ * JoblyApp -> RoutesList -> HomePage
  */
+
 function HomePage() {
   const { user } = useContext(userContext);
   const navigate = useNavigate();
 
+  // Handles login click.
   function loginClick() {
     navigate("/login");
   }
 
+  // Handles signup click.
   function signupClick() {
     navigate("/signup");
   }
@@ -25,7 +28,7 @@ function HomePage() {
   return (
     <div className="HomePage">
       <div className="container-fluid text-center">
-        <h1 class="mt-3 mb-3">Jobly</h1>
+        <h1 className="mt-3 mb-3">Jobly</h1>
 
         {user &&
           <>
@@ -35,7 +38,7 @@ function HomePage() {
 
         {!user &&
           <>
-            <h4 class="mb-4">All the jobs in one, convenient place.</h4>
+            <h4 className="mb-4">All the jobs in one, convenient place.</h4>
             <button type="button"
               onClick={loginClick}
               className="btn btn-lg btn-info fw-bold me-3">

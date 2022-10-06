@@ -5,15 +5,18 @@ exports[`matches snapshot 1`] = `
   <div
     class="HomePage"
   >
-    <h1>
-      Jobly
-    </h1>
-    <p>
-      All the jobs in one, convenient place.
-    </p>
-    <p>
-      Welcome back !
-    </p>
+    <div
+      class="container-fluid text-center"
+    >
+      <h1
+        class="mt-3 mb-3"
+      >
+        Jobly
+      </h1>
+      <h4>
+        Welcome back 
+      </h4>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -23,19 +26,32 @@ exports[`matches snapshot when logged out 1`] = `
   <div
     class="HomePage"
   >
-    <h1>
-      Jobly
-    </h1>
-    <button
-      class="btn-primary btn Login-addBtn"
+    <div
+      class="container-fluid text-center"
     >
-      Login
-    </button>
-    <button
-      class="btn-primary btn Signup-addBtn"
-    >
-      Signup
-    </button>
+      <h1
+        class="mt-3 mb-3"
+      >
+        Jobly
+      </h1>
+      <h4
+        class="mb-4"
+      >
+        All the jobs in one, convenient place.
+      </h4>
+      <button
+        class="btn btn-lg btn-info fw-bold me-3"
+        type="button"
+      >
+        Login
+      </button>
+      <button
+        class="btn btn-lg btn-info fw-bold"
+        type="button"
+      >
+        Signup
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;

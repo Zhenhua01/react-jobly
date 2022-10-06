@@ -7,17 +7,21 @@ import userContext from './context/userContext';
 import jwt from 'jwt-decode';
 import Loading from './utils/Loading';
 
+
 const initialLoad = {
   isLoading: true,
   data: null
 };
 
-/**JoblyApp
+/** Jobly Application.
  *
  * Prop: None
- * State: user: {  }
  *
- * App -> JoblyApp -> {NavBar, RoutesList}
+ * State:
+ *  - user: object data from API on authenticated user
+ *  - token: authentication JWT from API
+ *
+ * App -> JoblyApp -> { NavBar, RoutesList }
 */
 
 function JoblyApp() {
@@ -26,7 +30,8 @@ function JoblyApp() {
   const [user, setUser] = useState(initialLoad);
   // console.log("inside JoblyApp");
 
-  useEffect(function getUserInfoAndSetLocalStorage() {
+  // Checks for logged in user and sets local storage if there's a token
+  useEffect(function getUserDataAndLocalStorage() {
     // console.log("inside JoblyApp useEffect");
     function setLocalStorage() {
       localStorage.setItem('token', token);
@@ -55,27 +60,32 @@ function JoblyApp() {
 
   }, [token]);
 
+  /** Handles signing up a new user, logs them in, and saves token. */
   async function signup(formData) {
     const token = await JoblyApi.signup(formData);
     setToken(token);
     setUser(initialLoad);
   }
 
+  /** Handles loggin in a user and saves token. */
   async function login(formData) {
     const token = await JoblyApi.login(formData);
     setToken(token);
     setUser(initialLoad);
   }
 
+  /** Handles updating user information. */
   async function update(formData) {
     delete formData.username;
-    const updatedUser = await JoblyApi.update(user.data.username, formData);
+    await JoblyApi.update(user.data.username, formData);
+    const userData = await JoblyApi.getUserInfo(user.data.username);
     setUser({
       isLoading: false,
-      data: updatedUser
+      data: userData
     });
   }
 
+  /** Handles logging out user, removes user info and token. */
   function logout() {
     localStorage.clear();
     setToken(null);
@@ -85,6 +95,7 @@ function JoblyApp() {
     });
   }
 
+  /** Handles user applying to a job. */
   async function apply(id) {
     const updatedUser = await JoblyApi.applyToJob(user.data.username, id);
     setUser({
@@ -92,11 +103,10 @@ function JoblyApp() {
       data: updatedUser
     });
   }
-
-  // first render stops here, wait for useEffect and token/user
+  console.log("user", user)
+  // Wait for useEffect to check for logged in user to set user/token
   if (user.isLoading) return <Loading />;
 
-  // second render with user info if any and then render routes
   return (
     <userContext.Provider value={{ user: user.data, apply }}>
       <div className="JoblyApp">

@@ -3,51 +3,58 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <form
-    class="LoginForm"
+    class="LoginForm mt-4"
   >
     <div
-      class="mb-3"
+      class="container-fluid col-6 offset-3 form-group"
     >
-      <label
-        for="username"
+      <div
+        class="mb-2"
       >
-        Username
-      </label>
-      <input
-        aria-label="username"
-        class="form-control"
-        id="username"
-        name="username"
-        required=""
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <label
-        for="password"
+        <label
+          class="form-label"
+          for="username"
+        >
+          Username
+        </label>
+        <input
+          aria-label="username"
+          class="form-control"
+          id="username"
+          name="username"
+          required=""
+          value=""
+        />
+      </div>
+      <div
+        class="mb-2"
       >
-        Password
-      </label>
-      <input
-        aria-label="password"
-        class="form-control"
-        id="password"
-        name="password"
-        required=""
-        type="password"
-        value=""
-      />
-    </div>
-    <div
-      class="mb-3"
-    >
-      <button
-        class="btn-primary btn LoginForm-addBtn"
+        <label
+          class="form-label"
+          for="password"
+        >
+          Password
+        </label>
+        <input
+          aria-label="password"
+          class="form-control"
+          id="password"
+          name="password"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        class="mt-4"
       >
-        Submit
-      </button>
+        <button
+          class="btn btn-lg btn-info fw-bold"
+          type="submit"
+        >
+          Login
+        </button>
+      </div>
     </div>
   </form>
 </DocumentFragment>
