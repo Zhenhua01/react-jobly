@@ -32,7 +32,7 @@ function HomePage() {
 
         {user &&
           <>
-            <h4>Welcome back {user.firstName}</h4>
+            <h4>Welcome back {user.firstName}.</h4>
           </>
         }
 

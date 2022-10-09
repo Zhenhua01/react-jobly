@@ -1,6 +1,11 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+// Use port 3001 when connecting to local backend server
+// const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+
+// Use heroku deployed backend when local server not available
+const BASE_URL =
+    process.env.REACT_APP_BASE_URL || "https://jobly-zhl-exp.herokuapp.com";
 
 /** API Class.
  *
