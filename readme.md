@@ -29,5 +29,3 @@ Launch the test runner with interactive watch mode:
 ### Notes
 
 This application connects to a RESTful API built on an Express backend that is deployed on Heroku.
-
-[Express Jobly Backend API](https://github.com/zhenhua01/express-sql-jobly)
